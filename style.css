@@ -1,0 +1,279 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #2d3a63, #1f1b3d); /* Dark purple-blue gradient */
+    color: #fff;
+    overflow-x: hidden;
+    height: 100vh;
+    animation: fadeInBackground 2s ease-in-out;
+}
+
+/* Navbar Styling */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #00f0ff; /* Neon cyan */
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff3ff3; /* Neon pink */
+    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+}
+
+/* Full-screen video background */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+/* Particles.js background */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Header Section */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    z-index: 2;
+    position: relative;
+    color: #fff;
+    animation: slideInDown 3s ease-out;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    color: #00f0ff; /* Neon cyan */
+    text-shadow: 0px 0px 10px #00f0ff, 0px 0px 20px #00f0ff, 0px 0px 30px #00f0ff;
+    animation: slideUp 1.5s ease-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 5px #000;
+    animation: fadeIn 3s ease-in-out;
+}
+
+/* About Me Section */
+.about-me {
+    padding: 80px 18px;
+    text-align: center;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    color: #ff3ff3; /* Neon pink */
+    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+    font-family: 'Orbitron', sans-serif;
+    animation: slideUp 2s ease-out;
+}
+
+.about-me p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 40px 0;
+    color: #ff3ff3; /* Neon pink */
+    text-transform: uppercase;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Skills Section */
+.skills, .projects, .education {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: cardPop 0.5s ease-out;
+    transform: perspective(1000px);
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.1) rotateY(10deg);
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 8px 20px rgba(255, 0, 0, 0.7);
+    cursor: pointer;
+}
+
+.card h4 {
+    color: #ff3ff3; /* Neon pink */
+    font-size: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.card p {
+    color: #fff;
+    font-size: 1rem;
+    text-shadow: 0px 0px 5px #000;
+    transition: all 0.3s ease;
+}
+
+.card:hover h4 {
+    color: #00f0ff; /* Neon cyan */
+}
+
+.card:hover p {
+    color: #00f0ff;
+    text-shadow: 0px 0px 15px #00f0ff;
+}
+
+@keyframes cardPop {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+footer a {
+    color: #00f0ff; /* Neon cyan */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    text-shadow: 0 0 10px #00f0ff;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        color: #00f0ff;
+    }
+    25%, 75% {
+        color: transparent;
+    }
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Parallax scrolling effect */
+.parallax {
+    position: relative;
+    background: url('https://your-image-url.com') center/cover no-repeat fixed;
+    height: 100vh;
+    animation: parallaxScroll 3s ease-out infinite;
+}
+
+@keyframes parallaxScroll {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 0% 100%; }
+}
