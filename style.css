@@ -25,7 +25,6 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Ensures proper wrapping on mobile */
 }
 
 nav ul li {
@@ -39,11 +38,12 @@ nav ul li a {
     font-size: 1.2rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    text-shadow: 0px 0px 3px #00f0ff; /* Softer neon effect */
 }
 
 nav ul li a:hover {
     color: #ff3ff3; /* Neon pink */
-    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+    text-shadow: 0px 0px 5px #ff3ff3, 0px 0px 10px #ff3ff3; /* Softer glow */
 }
 
 /* Full-screen video background */
@@ -70,7 +70,7 @@ nav ul li a:hover {
 /* Header Section */
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px; /* Adjusted padding for mobile */
     z-index: 2;
     position: relative;
     color: #fff;
@@ -78,11 +78,11 @@ header {
 }
 
 header h1 {
-    font-size: 4rem;
+    font-size: 3rem; /* Adjusted font size for better readability on mobile */
     font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
     color: #00f0ff; /* Neon cyan */
-    text-shadow: 0px 0px 10px #00f0ff, 0px 0px 20px #00f0ff, 0px 0px 30px #00f0ff;
+    text-shadow: 0px 0px 5px #00f0ff, 0px 0px 10px #00f0ff; /* Softer neon effect */
     animation: slideUp 1.5s ease-out;
 }
 
@@ -94,7 +94,7 @@ header p {
 
 /* About Me Section */
 .about-me {
-    padding: 80px 18px;
+    padding: 60px 20px; /* Adjusted padding */
     text-align: center;
     animation: fadeIn 3s ease-in-out;
 }
@@ -102,7 +102,7 @@ header p {
 .about-me h2 {
     font-size: 2.5rem;
     color: #ff3ff3; /* Neon pink */
-    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+    text-shadow: 0px 0px 5px #ff3ff3, 0px 0px 10px #ff3ff3; /* Softer neon effect */
     font-family: 'Orbitron', sans-serif;
     animation: slideUp 2s ease-out;
 }
@@ -160,7 +160,7 @@ header p {
     color: #ff3ff3; /* Neon pink */
     text-transform: uppercase;
     font-family: 'Orbitron', sans-serif;
-    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+    text-shadow: 0px 0px 5px #ff3ff3, 0px 0px 10px #ff3ff3; /* Softer neon effect */
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -171,7 +171,6 @@ header p {
     gap: 30px;
     margin-bottom: 60px;
     animation: fadeIn 3s ease-in-out;
-    flex-wrap: wrap; /* Ensures proper wrapping on mobile */
 }
 
 .card {
@@ -199,22 +198,23 @@ header p {
     font-size: 1.5rem;
     font-family: 'Orbitron', sans-serif;
     transition: all 0.3s ease;
+    text-shadow: 0px 0px 3px #ff3ff3; /* Softer neon effect */
 }
 
 .card p {
     color: #fff;
     font-size: 1rem;
-    text-shadow: 0px 0px 5px #000;
-    transition: all 0.3s ease;
+    text-shadow: 0px 0px 3px #000; /* Softer shadow effect */
 }
 
 .card:hover h4 {
     color: #00f0ff; /* Neon cyan */
+    text-shadow: 0px 0px 5px #00f0ff, 0px 0px 10px #00f0ff; /* Softer neon effect on hover */
 }
 
 .card:hover p {
     color: #00f0ff;
-    text-shadow: 0px 0px 15px #00f0ff;
+    text-shadow: 0px 0px 10px #00f0ff; /* Softer glow */
 }
 
 @keyframes cardPop {
@@ -246,10 +246,11 @@ footer a {
     color: #00f0ff; /* Neon cyan */
     text-decoration: none;
     transition: all 0.3s ease;
+    text-shadow: 0px 0px 3px #00f0ff; /* Softer neon effect */
 }
 
 footer a:hover {
-    text-shadow: 0 0 10px #00f0ff;
+    text-shadow: 0 0 5px #00f0ff;
     animation: blink 1s infinite;
 }
 
@@ -282,16 +283,24 @@ html {
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
+    header {
+        padding: 40px 20px; /* Reduced padding for header */
+    }
+
     header h1 {
-        font-size: 3rem;
+        font-size: 2.5rem; /* Smaller font size for header */
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 1rem; /* Reduced font size for paragraph */
     }
 
     .about-me h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Smaller font size for about section */
+    }
+
+    .about-me p {
+        font-size: 1rem; /* Adjusted font size for better readability */
     }
 
     .skills, .projects, .education {
@@ -300,21 +309,12 @@ html {
     }
 
     .card {
-        width: 90%;
+        width: 90%; /* Reduced card width for mobile */
         margin: 10px 0;
     }
 
     .section-title {
         font-size: 2rem;
-    }
-
-    nav ul {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    nav ul li {
-        margin: 10px 0;
     }
 }
 
@@ -325,16 +325,24 @@ html {
     }
 
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Even smaller font size */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .about-me h2 {
+        font-size: 1.8rem; /* Even smaller font size for about section */
     }
 
     .card {
-        width: 100%;
+        width: 100%; /* Full width cards on small screens */
         padding: 15px;
     }
 
     footer p {
-        font-size: 1rem;
+        font-size: 1rem; /* Smaller footer text */
     }
 
     nav ul li a {
