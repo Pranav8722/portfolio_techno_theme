@@ -26,6 +26,7 @@ nav ul {
     display: flex;
     justify-content: center;
 }
+
 nav ul li {
     margin: 0 20px;
 }
@@ -37,11 +38,12 @@ nav ul li a {
     font-size: 1.2rem;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    text-shadow: 0px 0px 3px #00f0ff; /* Softer neon effect */
 }
 
 nav ul li a:hover {
     color: #ff3ff3; /* Neon pink */
-    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+    text-shadow: 0px 0px 5px #ff3ff3, 0px 0px 10px #ff3ff3; /* Softer glow */
 }
 
 /* Full-screen video background */
@@ -80,7 +82,7 @@ header h1 {
     font-family: 'Orbitron', sans-serif;
     text-transform: uppercase;
     color: #00f0ff; /* Neon cyan */
-    text-shadow: 0px 0px 10px #00f0ff, 0px 0px 20px #00f0ff, 0px 0px 30px #00f0ff;
+    text-shadow: 0px 0px 5px #00f0ff, 0px 0px 10px #00f0ff; /* Softer neon effect */
     animation: slideUp 1.5s ease-out;
 }
 
@@ -100,7 +102,7 @@ header p {
 .about-me h2 {
     font-size: 2.5rem;
     color: #ff3ff3; /* Neon pink */
-    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+    text-shadow: 0px 0px 5px #ff3ff3, 0px 0px 10px #ff3ff3; /* Softer neon effect */
     font-family: 'Orbitron', sans-serif;
     animation: slideUp 2s ease-out;
 }
@@ -158,7 +160,7 @@ header p {
     color: #ff3ff3; /* Neon pink */
     text-transform: uppercase;
     font-family: 'Orbitron', sans-serif;
-    text-shadow: 0px 0px 10px #ff3ff3, 0px 0px 20px #ff3ff3;
+    text-shadow: 0px 0px 5px #ff3ff3, 0px 0px 10px #ff3ff3; /* Softer neon effect */
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -196,22 +198,23 @@ header p {
     font-size: 1.5rem;
     font-family: 'Orbitron', sans-serif;
     transition: all 0.3s ease;
+    text-shadow: 0px 0px 3px #ff3ff3; /* Softer neon effect */
 }
 
 .card p {
     color: #fff;
     font-size: 1rem;
-    text-shadow: 0px 0px 5px #000;
-    transition: all 0.3s ease;
+    text-shadow: 0px 0px 3px #000; /* Softer shadow effect */
 }
 
 .card:hover h4 {
     color: #00f0ff; /* Neon cyan */
+    text-shadow: 0px 0px 5px #00f0ff, 0px 0px 10px #00f0ff; /* Softer neon effect on hover */
 }
 
 .card:hover p {
     color: #00f0ff;
-    text-shadow: 0px 0px 15px #00f0ff;
+    text-shadow: 0px 0px 10px #00f0ff; /* Softer glow */
 }
 
 @keyframes cardPop {
@@ -243,10 +246,11 @@ footer a {
     color: #00f0ff; /* Neon cyan */
     text-decoration: none;
     transition: all 0.3s ease;
+    text-shadow: 0px 0px 3px #00f0ff; /* Softer neon effect */
 }
 
 footer a:hover {
-    text-shadow: 0 0 10px #00f0ff;
+    text-shadow: 0 0 5px #00f0ff;
     animation: blink 1s infinite;
 }
 
