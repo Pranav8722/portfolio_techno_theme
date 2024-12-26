@@ -277,3 +277,60 @@ html {
     0% { background-position: 0% 0%; }
     100% { background-position: 0% 100%; }
 }
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .about-me h2 {
+        font-size: 2rem;
+    }
+
+    .skills, .projects, .education {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Media Queries for Small Screens (Mobile) */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 1rem;
+    }
+
+    .about-me p {
+        font-size: 1rem;
+    }
+}
