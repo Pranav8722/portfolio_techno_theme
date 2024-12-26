@@ -311,7 +311,7 @@ html {
 }
 
 /* Media Queries for Small Screens (Mobile) */
-@media (max-width: 480px) {
+@media (max-width: 450px) {
     body {
         font-size: 0.9rem;
     }
@@ -321,7 +321,7 @@ html {
     }
 
     .card {
-        width: 100%;
+        width: 100vh;
         padding: 15px;
     }
 
